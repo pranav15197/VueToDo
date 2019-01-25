@@ -1,6 +1,6 @@
 <template>
   <ul>
-   <to-do-item v-for="(task, index) in tasks" :key="index" :task="task"/>
+   <to-do-item v-for="(task, index) in tasks" :key="index" :task="task" :no-bottom-border="index == tasks.length-1"/>
   </ul>
 </template>
 
@@ -23,9 +23,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 ul {
-  border: 1px solid black;
+  border: 2px solid gray;
+  padding: 0px;
   border-radius: 10px;
-  padding: 20px;
   list-style: none;
 }
 </style>
